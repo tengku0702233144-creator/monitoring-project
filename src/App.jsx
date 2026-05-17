@@ -7,71 +7,25 @@ import Attendance from "./pages/Attendance";
 import Reports from "./pages/Reports";
 import SettingsPage from "./pages/SettingsPage";
 import Login from "./pages/Login";
-import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
 
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/" element={<Dashboard />} />
 
-        <Route
-          path="/projects"
-          element={
-            <ProtectedRoute>
-              <Projects />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/projects" element={<Projects />} />
 
-        <Route
-          path="/warehouse"
-          element={
-            <ProtectedRoute>
-              <Warehouse />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/warehouse" element={<Warehouse />} />
 
-        <Route
-          path="/attendance"
-          element={
-            <ProtectedRoute>
-              <Attendance />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/attendance" element={<Attendance />} />
 
-        <Route
-          path="/reports"
-          element={
-            <ProtectedRoute>
-              <Reports />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/reports" element={<Reports />} />
 
-        <Route
-          path="/settings"
-          element={
-            <ProtectedRoute>
-              <SettingsPage />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/settings" element={<SettingsPage />} />
 
-        <Route
-          path="/login"
-          element={<Login />}
-        />
+        <Route path="/login" element={<Login />} />
 
       </Routes>
     </BrowserRouter>
